@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora de IMC</title>
+</head>
+<body>
+    <h1>calculadora de IMC</h1>
+    <style>
+        .desnutrido{
+            background-color: beige;
+            color: rgb(233, 117, 102);
+        }
+        .normal{
+            background-color: aquamarine;
+            color: black;
+        }
+        .sobreobeso{
+            background-color: cornflowerblue;
+            color: aliceblue;
+
+        }
+        .obeso{
+            background-color: darkkhaki;
+            color: darksalmon;
+        }
+    </style>
+    <hr>
+    <script>
+        //entradas
+        var nome = prompt("digite seu nome")
+        document.write("olá <strong>",nome,"</strong><br>")
+        var pesotexto = prompt("digite o peso")
+        var alturatexto = prompt("digite a altura")
+        //processamento
+        var peso = parseFloat(pesotexto)
+        var altura = parseFloat(alturatexto)
+        var IMC = peso /(altura*altura)
+        document.write("peso:",peso,"<br>")
+        document.write("altura:",altura,"<br>")
+        document.write("IMC:",IMC,"<br>")
+        if(IMC<= 18.5){
+            document.write("voce está desnutrido<br>")
+            document.write('<img src="desnutrido.jpg"  width="120" height="120" alt="pessoa desnutrida">')
+        } else if (IMC <= 24.9) { 
+            document.write("você está com o peso normal<br>")
+            document.write('<img src="peso normal.jpg"  width="120" height="120" alt="peso normal"')
+        } else if (IMC <= 24.9) {
+            document.write("você esta sobrepeso pré obesidade")
+            document.write('<img src="sobreobeso.jpg" width="120" height="120" alt="sobreobeso">')
+        } else if (IMC <= 29.9) {
+            document.write("cuidado você esta obeso.<br>")
+            document.write('<img src="obeso.jpg" width="120" height="120" alt="obeso"')
+        }
+    </script>
+</body>
+</html>
